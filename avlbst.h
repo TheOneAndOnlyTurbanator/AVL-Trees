@@ -7,6 +7,7 @@
 #include <algorithm>
 #include "bst.h"
 
+
 struct KeyError { };
 
 /**
@@ -18,11 +19,11 @@ template <typename Key, typename Value>
 class AVLNode : public Node<Key, Value>
 {
 public:
-    // Constructor/destructor.
+    // Constructor/destructor
     AVLNode(const Key& key, const Value& value, AVLNode<Key, Value>* parent);
     virtual ~AVLNode();
 
-    // Getter/setter for the node's height.
+    // Getter/setter for the node's height
     char getBalance () const;
     void setBalance (char balance);
     void updateBalance(char diff);
